@@ -1,12 +1,11 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api',
+  baseURL: 'https://backend-liart-ten-24.vercel.app/api',
   headers: {
     'Content-Type': 'application/json',
   },
 });
-
 // Request interceptor - attach token
 api.interceptors.request.use(
   (config) => {
